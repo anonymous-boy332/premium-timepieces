@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms & Conditions — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .terms-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(201,162,39,.12), transparent 35%),
+        linear-gradient(135deg, #111 0%, #181818 55%, #0d0d0d 100%);
+    }
+
+    .terms-container {
+      width: min(1000px, 92%);
+      margin: auto;
+    }
+
+    .terms-back {
+      display: inline-block;
+      margin-top: 28px;
+      color: #c9a227;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .terms-back:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+
+    .terms-hero {
+      text-align: center;
+      padding: 80px 20px 75px;
+    }
+
+    .terms-label {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .terms-hero h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 7vw, 70px);
+      font-weight: 600;
+    }
+
+    .terms-line {
+      width: 70px;
+      height: 1px;
+      background: #c9a227;
+      margin: 25px auto;
+    }
+
+    .terms-hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    /* CONTENT */
+
+    .terms-content {
+      background: #f8f7f3;
+      color: #222;
+      padding: 90px 0;
+    }
+
+    .terms-intro {
+      background: #fff;
+      border-left: 3px solid #c9a227;
+      padding: 25px 28px;
+      margin-bottom: 35px;
+    }
+
+    .terms-intro p {
+      margin: 0;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .terms-section {
+      background: #fff;
+      border: 1px solid #e5e0d3;
+      padding: 32px 35px;
+      margin-bottom: 18px;
+      transition: .3s;
+    }
+
+    .terms-section:hover {
+      border-color: #c9a227;
+    }
+
+    .terms-number {
+      color: #b08a18;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .terms-section h2 {
+      margin: 0 0 15px;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .terms-section p {
+      color: #6c6c6c;
+      font-size: 12px;
+      line-height: 1.9;
+      margin: 0 0 12px;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #6c6c6c;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .terms-section li {
+      padding-left: 4px;
+    }
+
+    /* HIGHLIGHT */
+
+    .terms-note {
+      margin-top: 30px;
+      padding: 25px;
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      border: 1px solid #292929;
+    }
+
+    .terms-note strong {
+      display: block;
+      color: #c9a227;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .terms-note p {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    /* CTA */
+
+    .terms-cta {
+      padding: 80px 20px;
+      text-align: center;
+      background: #111;
+    }
+
+    .terms-cta h2 {
+      margin: 0 0 15px;
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+    }
+
+    .terms-cta p {
+      max-width: 580px;
+      margin: 0 auto 25px;
+      color: #888;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .terms-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #c9a227;
+      color: #111;
+      text-decoration: none;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: .3s;
+    }
+
+    .terms-btn:hover {
+      background: #fff;
+    }
+
+    /* FOOTER */
+
+    .terms-footer {
+      border-top: 1px solid #252525;
+      padding: 28px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 10px;
+      letter-spacing: 1px;
+      background: #0d0d0d;
+    }
+
+    .terms-footer strong {
+      color: #c9a227;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 600px) {
+
+      .terms-hero {
+        padding: 60px 15px;
+      }
+
+      .terms-content {
+        padding: 65px 0;
+      }
+
+      .terms-section {
+        padding: 26px 22px;
+      }
+
+      .terms-section h2 {
+        font-size: 22px;
+      }
+
+      .terms-cta {
+        padding: 65px 20px;
+      }
+
+      .terms-cta h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="terms-page">
+
+    <div class="terms-container">
+      <a href="index.html" class="terms-back">← Back to Store</a>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="terms-hero">
+
+      <div class="terms-label">PREMIUM TIMEPIECES</div>
+
+      <h1>Terms & Conditions</h1>
+
+      <div class="terms-line"></div>
+
+      <p>
+        Please read these terms carefully before using our website
+        or placing an order with Premium Timepieces.
+      </p>
+
+    </section>
+
+    <!-- CONTENT -->
+
+    <section class="terms-content">
+
+      <div class="terms-container">
+
+        <div class="terms-intro">
+
+          <p>
+            These Terms & Conditions describe the rules and guidelines
+            for using the Premium Timepieces website and purchasing
+            products through our online store. By using this website,
+            you agree to follow these terms.
+          </p>
+
+        </div>
+
+        <!-- 01 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            01 — GENERAL
+          </div>
+
+          <h2>General Terms</h2>
+
+          <p>
+            Premium Timepieces provides an online platform for
+            customers to browse and purchase watches and related
+            products.
+          </p>
+
+          <p>
+            We reserve the right to update product information,
+            prices, availability and website content when necessary.
+          </p>
+
+        </div>
+
+        <!-- 02 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            02 — PRODUCTS
+          </div>
+
+          <h2>Products & Information</h2>
+
+          <p>
+            We make reasonable efforts to display product information,
+            descriptions and images accurately.
+          </p>
+
+          <p>
+            However, slight differences in product appearance,
+            including color or visual presentation, may occur
+            depending on your device or display settings.
+          </p>
+
+        </div>
+
+        <!-- 03 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            03 — ORDERS
+          </div>
+
+          <h2>Orders & Confirmation</h2>
+
+          <p>
+            Placing an order through the website represents a request
+            to purchase the selected products.
+          </p>
+
+          <p>
+            Orders may be reviewed or confirmed before dispatch.
+            We reserve the right to cancel an order in situations
+            such as incorrect information, product unavailability
+            or suspected fraudulent activity.
+          </p>
+
+        </div>
+
+        <!-- 04 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            04 — PRICING
+          </div>
+
+          <h2>Prices & Payments</h2>
+
+          <p>
+            Product prices are displayed on the website in Pakistani
+            Rupees unless otherwise stated.
+          </p>
+
+          <p>
+            Our current checkout supports Cash on Delivery.
+            Customers are responsible for providing accurate
+            delivery and contact information.
+          </p>
+
+        </div>
+
+        <!-- 05 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            05 — DELIVERY
+          </div>
+
+          <h2>Shipping & Delivery</h2>
+
+          <p>
+            Delivery times can vary depending on the destination,
+            courier availability, order confirmation and other
+            circumstances.
+          </p>
+
+          <ul>
+            <li>Customers should provide a complete delivery address.</li>
+            <li>Customers should provide a reachable phone number.</li>
+            <li>Delivery delays may occur due to circumstances beyond our control.</li>
+            <li>Customers may contact support for order updates.</li>
+          </ul>
+
+        </div>
+
+        <!-- 06 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            06 — RETURNS
+          </div>
+
+          <h2>Returns & Exchanges</h2>
+
+          <p>
+            Return or exchange requests may be accepted for eligible
+            products according to our applicable return policy.
+          </p>
+
+          <p>
+            Customers should contact Premium Timepieces before
+            returning any product. Products may need to be unused,
+            undamaged and accompanied by their original packaging.
+          </p>
+
+        </div>
+
+        <!-- 07 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            07 — WARRANTY
+          </div>
+
+          <h2>Warranty</h2>
+
+          <p>
+            Warranty availability and coverage may vary depending
+            on the product.
+          </p>
+
+          <p>
+            Warranty does not necessarily cover damage caused by
+            misuse, accidents, unauthorized modifications or
+            normal wear and tear unless specifically stated.
+          </p>
+
+        </div>
+
+        <!-- 08 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            08 — WEBSITE USE
+          </div>
+
+          <h2>Acceptable Use</h2>
+
+          <p>
+            Users agree not to misuse the website or attempt to
+            interfere with its normal operation.
+          </p>
+
+          <ul>
+            <li>Do not attempt unauthorized access.</li>
+            <li>Do not use the website for fraudulent activities.</li>
+            <li>Do not intentionally disrupt website functionality.</li>
+            <li>Do not copy or misuse website content without permission.</li>
+          </ul>
+
+        </div>
+
+        <!-- 09 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            09 — INTELLECTUAL PROPERTY
+          </div>
+
+          <h2>Intellectual Property</h2>
+
+          <p>
+            Website branding, design elements, text, graphics and
+            other original content may belong to Premium Timepieces
+            or their respective owners.
+          </p>
+
+          <p>
+            Such content should not be reproduced, copied or
+            distributed without appropriate permission.
+          </p>
+
+        </div>
+
+        <!-- 10 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            10 — PRIVACY
+          </div>
+
+          <h2>Customer Information</h2>
+
+          <p>
+            Information provided during checkout or while contacting
+            us should be accurate and current.
+          </p>
+
+          <p>
+            Customer information should be handled according to
+            our applicable privacy practices and policies.
+          </p>
+
+        </div>
+
+        <!-- 11 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            11 — LIMITATION
+          </div>
+
+          <h2>Limitation of Liability</h2>
+
+          <p>
+            Premium Timepieces will make reasonable efforts to keep
+            the website and product information accurate and available.
+            However, we cannot guarantee uninterrupted website access
+            or that every piece of information will always be error-free.
+          </p>
+
+        </div>
+
+        <!-- 12 -->
+
+        <div class="terms-section">
+
+          <div class="terms-number">
+            12 — CHANGES
+          </div>
+
+          <h2>Changes to These Terms</h2>
+
+          <p>
+            We may update these Terms & Conditions from time to time
+            to reflect changes to our services, website or business
+            practices.
+          </p>
+
+          <p>
+            Updated terms will be published on this page.
+          </p>
+
+        </div>
+
+        <div class="terms-note">
+
+          <strong>Thank You for Choosing Premium Timepieces</strong>
+
+          <p>
+            We appreciate your trust and look forward to providing
+            you with a premium watch shopping experience.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="terms-cta">
+
+      <h2>Have Questions?</h2>
+
+      <p>
+        If you have any questions about these terms, your order,
+        returns or our services, our support team is ready to help.
+      </p>
+
+      <a href="contact.html" class="terms-btn">
+        CONTACT US
+      </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="terms-footer">
+      © 2026 <strong>PREMIUM TIMEPIECES</strong> — Timeless. Elegant. Yours.
+    </footer>
+
+  </div>
+
+</body>
+</html>

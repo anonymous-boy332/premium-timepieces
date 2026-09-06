@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Collections — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body{
+      margin:0;
+      background:#f8f7f3;
+      color:#111;
+      font-family:"Montserrat",Arial,sans-serif;
+    }
+
+    .collections-page{
+      max-width:1200px;
+      margin:0 auto;
+      padding:55px 20px 80px;
+    }
+
+    .collections-header{
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 50px;
+    }
+
+    .collections-label{
+      color:#c9a227;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:2.5px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .collections-title{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:48px;
+      line-height:1.1;
+      margin:0 0 15px;
+      font-weight:600;
+    }
+
+    .collections-description{
+      color:#777;
+      font-size:11px;
+      line-height:1.9;
+      margin:0;
+    }
+
+    .collection-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .collection-card{
+      position:relative;
+      min-height:390px;
+      overflow:hidden;
+      background:#111;
+      cursor:pointer;
+    }
+
+    .collection-card img{
+      width:100%;
+      height:390px;
+      object-fit:cover;
+      display:block;
+      opacity:.78;
+      transition:.5s ease;
+    }
+
+    .collection-card:hover img{
+      transform:scale(1.045);
+      opacity:.58;
+    }
+
+    .collection-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:32px;
+      background:linear-gradient(
+        to top,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.08) 65%
+      );
+    }
+
+    .collection-small{
+      color:#c9a227;
+      font-size:8px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:9px;
+    }
+
+    .collection-name{
+      color:#fff;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:32px;
+      margin-bottom:8px;
+    }
+
+    .collection-text{
+      color:#ddd;
+      font-size:9px;
+      line-height:1.7;
+      max-width:390px;
+      margin-bottom:18px;
+    }
+
+    .collection-btn{
+      display:inline-flex;
+      width:max-content;
+      align-items:center;
+      justify-content:center;
+      padding:11px 18px;
+      border:1px solid #c9a227;
+      background:#c9a227;
+      color:#111;
+      font-size:8px;
+      font-weight:700;
+      letter-spacing:1.5px;
+      text-decoration:none;
+      transition:.25s;
+    }
+
+    .collection-btn:hover{
+      background:#fff;
+      border-color:#fff;
+    }
+
+    .collection-card.wide{
+      grid-column:1 / -1;
+    }
+
+    .collection-card.wide img{
+      height:330px;
+    }
+
+    .collection-card.wide{
+      min-height:330px;
+    }
+
+    .back-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:#666;
+      text-decoration:none;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:1px;
+      margin-bottom:35px;
+      text-transform:uppercase;
+    }
+
+    .back-link:hover{
+      color:#c9a227;
+    }
+
+    @media(max-width:700px){
+
+      .collections-page{
+        padding:30px 15px 60px;
+      }
+
+      .collections-title{
+        font-size:37px;
+      }
+
+      .collections-header{
+        margin-bottom:35px;
+      }
+
+      .collection-grid{
+        grid-template-columns:1fr;
+      }
+
+      .collection-card,
+      .collection-card.wide{
+        grid-column:auto;
+        min-height:360px;
+      }
+
+      .collection-card img,
+      .collection-card.wide img{
+        height:360px;
+      }
+
+      .collection-name{
+        font-size:28px;
+      }
+
+      .collection-overlay{
+        padding:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="collections-page">
+
+    <a href="index.html" class="back-link">
+      ← Back to Store
+    </a>
+
+    <header class="collections-header">
+
+      <div class="collections-label">
+        Premium Timepieces
+      </div>
+
+      <h1 class="collections-title">
+        Our Collections
+      </h1>
+
+      <p class="collections-description">
+        Discover our carefully curated selection of premium timepieces,
+        designed to complement every style, occasion and personality.
+      </p>
+
+    </header>
+
+
+    <section class="collection-grid">
+
+
+      <!-- MEN'S COLLECTION -->
+      <article class="collection-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85"
+          alt="Men's Watches"
+        >
+
+        <div class="collection-overlay">
+
+          <div class="collection-small">
+            Collection 01
+          </div>
+
+          <div class="collection-name">
+            Men's Watches
+          </div>
+
+          <div class="collection-text">
+            Refined timepieces crafted for confidence, sophistication
+            and everyday elegance.
+          </div>
+
+          <a
+            href="index.html"
+            class="collection-btn"
+          >
+            SHOP MEN'S
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WOMEN'S COLLECTION -->
+      <article class="collection-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=1200&q=85"
+          alt="Women's Watches"
+        >
+
+        <div class="collection-overlay">
+
+          <div class="collection-small">
+            Collection 02
+          </div>
+
+          <div class="collection-name">
+            Women's Watches
+          </div>
+
+          <div class="collection-text">
+            Elegant designs with graceful details made to elevate
+            every occasion.
+          </div>
+
+          <a
+            href="index.html"
+            class="collection-btn"
+          >
+            SHOP WOMEN'S
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- LUXURY COLLECTION -->
+      <article class="collection-card wide">
+
+        <img
+          src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1600&q=85"
+          alt="Luxury Watches"
+        >
+
+        <div class="collection-overlay">
+
+          <div class="collection-small">
+            Collection 03
+          </div>
+
+          <div class="collection-name">
+            Luxury Collection
+          </div>
+
+          <div class="collection-text">
+            Exceptional timepieces created for those who appreciate
+            premium materials, distinctive design and timeless luxury.
+          </div>
+
+          <a
+            href="index.html"
+            class="collection-btn"
+          >
+            EXPLORE LUXURY
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- CLASSIC COLLECTION -->
+      <article class="collection-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1200&q=85"
+          alt="Classic Watches"
+        >
+
+        <div class="collection-overlay">
+
+          <div class="collection-small">
+            Collection 04
+          </div>
+
+          <div class="collection-name">
+            Classic Collection
+          </div>
+
+          <div class="collection-text">
+            Timeless silhouettes inspired by traditional watchmaking
+            and effortless sophistication.
+          </div>
+
+          <a
+            href="index.html"
+            class="collection-btn"
+          >
+            VIEW CLASSICS
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- EXECUTIVE COLLECTION -->
+      <article class="collection-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=1200&q=85"
+          alt="Executive Watches"
+        >
+
+        <div class="collection-overlay">
+
+          <div class="collection-small">
+            Collection 05
+          </div>
+
+          <div class="collection-name">
+            Executive Collection
+          </div>
+
+          <div class="collection-text">
+            Powerful, polished designs created for business,
+            leadership and modern professional style.
+          </div>
+
+          <a
+            href="index.html"
+            class="collection-btn"
+          >
+            SHOP EXECUTIVE
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+</body>
+</html>

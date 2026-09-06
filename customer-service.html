@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Customer Service — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .service-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(201,162,39,.12), transparent 35%),
+        linear-gradient(135deg, #111 0%, #181818 55%, #0d0d0d 100%);
+    }
+
+    .service-container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .service-back {
+      display: inline-block;
+      margin-top: 28px;
+      color: #c9a227;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .service-back:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+
+    .service-hero {
+      text-align: center;
+      padding: 80px 20px 75px;
+    }
+
+    .service-label {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .service-hero h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 7vw, 72px);
+      font-weight: 600;
+    }
+
+    .service-line {
+      width: 70px;
+      height: 1px;
+      background: #c9a227;
+      margin: 25px auto;
+    }
+
+    .service-hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* QUICK HELP */
+
+    .quick-help {
+      padding-bottom: 85px;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .quick-card {
+      background: #151515;
+      border: 1px solid #292929;
+      padding: 30px 20px;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .quick-card:hover {
+      border-color: #c9a227;
+      transform: translateY(-5px);
+    }
+
+    .quick-icon {
+      width: 55px;
+      height: 55px;
+      border: 1px solid #c9a227;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 17px;
+      color: #c9a227;
+      font-size: 19px;
+    }
+
+    .quick-card h3 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+    }
+
+    .quick-card p {
+      margin: 0;
+      color: #888;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .quick-card a {
+      color: #c9a227;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-top: 13px;
+    }
+
+    /* SERVICES */
+
+    .service-content {
+      background: #f8f7f3;
+      color: #222;
+      padding: 90px 0;
+    }
+
+    .service-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .service-heading .small-title {
+      color: #b08a18;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .service-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service-box {
+      background: #fff;
+      border: 1px solid #e5e0d3;
+      padding: 35px;
+      transition: .3s;
+    }
+
+    .service-box:hover {
+      border-color: #c9a227;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+
+    .service-box-number {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .service-box h3 {
+      margin: 0 0 13px;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+    }
+
+    .service-box p {
+      margin: 0;
+      color: #707070;
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .service-box ul {
+      margin: 15px 0 0;
+      padding-left: 18px;
+      color: #707070;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      background: #111;
+      padding: 90px 0;
+    }
+
+    .faq-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .faq-heading .small-title {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .faq-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border: 1px solid #292929;
+      margin-bottom: 12px;
+      background: #151515;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: #fff;
+      padding: 20px 22px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .5px;
+    }
+
+    .faq-plus {
+      color: #c9a227;
+      font-size: 20px;
+      font-weight: 400;
+      transition: .3s;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 22px 20px;
+      color: #888;
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .faq-item.active {
+      border-color: #c9a227;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-plus {
+      transform: rotate(45deg);
+    }
+
+    /* SUPPORT CTA */
+
+    .support-section {
+      padding: 90px 20px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(17,17,17,.9), rgba(17,17,17,.94)),
+        url("https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    }
+
+    .support-section h2 {
+      margin: 0 0 15px;
+      font-family: "Playfair Display", serif;
+      font-size: 43px;
+    }
+
+    .support-section p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .support-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .support-btn {
+      display: inline-block;
+      padding: 14px 27px;
+      text-decoration: none;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: .3s;
+    }
+
+    .support-btn.primary {
+      background: #c9a227;
+      color: #111;
+    }
+
+    .support-btn.secondary {
+      border: 1px solid #c9a227;
+      color: #c9a227;
+    }
+
+    .support-btn:hover {
+      background: #fff;
+      color: #111;
+      border-color: #fff;
+    }
+
+    /* FOOTER */
+
+    .service-footer {
+      border-top: 1px solid #252525;
+      padding: 28px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 10px;
+      letter-spacing: 1px;
+      background: #0d0d0d;
+    }
+
+    .service-footer strong {
+      color: #c9a227;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .service-hero {
+        padding: 60px 15px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-content,
+      .faq-section {
+        padding: 65px 0;
+      }
+
+      .service-heading h2,
+      .faq-heading h2,
+      .support-section h2 {
+        font-size: 34px;
+      }
+
+      .service-box {
+        padding: 28px 22px;
+      }
+
+      .support-section {
+        padding: 65px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="service-page">
+
+    <div class="service-container">
+      <a href="index.html" class="service-back">← Back to Store</a>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="service-hero">
+
+      <div class="service-label">PREMIUM TIMEPIECES</div>
+
+      <h1>Customer Service</h1>
+
+      <div class="service-line"></div>
+
+      <p>
+        We're here to make your shopping experience simple,
+        comfortable and reliable. Find answers to common questions
+        or contact our support team for assistance.
+      </p>
+
+    </section>
+
+    <!-- QUICK HELP -->
+
+    <section class="quick-help">
+
+      <div class="service-container">
+
+        <div class="quick-grid">
+
+          <div class="quick-card">
+
+            <div class="quick-icon">⌁</div>
+
+            <h3>Track Order</h3>
+
+            <p>
+              Need an update on your order?
+              Contact our support team.
+            </p>
+
+            <a href="contact.html">
+              GET HELP
+            </a>
+
+          </div>
+
+          <div class="quick-card">
+
+            <div class="quick-icon">↺</div>
+
+            <h3>Returns</h3>
+
+            <p>
+              Learn about our return and
+              exchange process.
+            </p>
+
+            <a href="#returns">
+              LEARN MORE
+            </a>
+
+          </div>
+
+          <div class="quick-card">
+
+            <div class="quick-icon">◇</div>
+
+            <h3>Warranty</h3>
+
+            <p>
+              Information about watch warranty
+              and after-sales support.
+            </p>
+
+            <a href="#warranty">
+              VIEW DETAILS
+            </a>
+
+          </div>
+
+          <div class="quick-card">
+
+            <div class="quick-icon">?</div>
+
+            <h3>FAQs</h3>
+
+            <p>
+              Quick answers to our most
+              frequently asked questions.
+            </p>
+
+            <a href="#faqs">
+              VIEW FAQS
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICE INFORMATION -->
+
+    <section class="service-content">
+
+      <div class="service-container">
+
+        <div class="service-heading">
+
+          <div class="small-title">
+            HOW WE CAN HELP
+          </div>
+
+          <h2>Customer Care</h2>
+
+        </div>
+
+        <div class="service-grid">
+
+          <!-- SHIPPING -->
+
+          <div class="service-box">
+
+            <div class="service-box-number">
+              01 — DELIVERY
+            </div>
+
+            <h3>Shipping & Delivery</h3>
+
+            <p>
+              We carefully prepare every order before dispatch.
+              Delivery times may vary depending on your location
+              and the selected delivery service.
+            </p>
+
+            <ul>
+              <li>Orders are processed after confirmation.</li>
+              <li>Delivery details are shared with customers.</li>
+              <li>Delivery times depend on destination.</li>
+              <li>Contact support if your order is delayed.</li>
+            </ul>
+
+          </div>
+
+          <!-- RETURNS -->
+
+          <div class="service-box" id="returns">
+
+            <div class="service-box-number">
+              02 — RETURNS
+            </div>
+
+            <h3>Returns & Exchanges</h3>
+
+            <p>
+              If you receive an eligible item that you would like
+              to return or exchange, please contact our customer
+              support team before sending the product back.
+            </p>
+
+            <ul>
+              <li>Contact us before returning an item.</li>
+              <li>Products should be unused and in original condition.</li>
+              <li>Original packaging should be retained.</li>
+              <li>Return eligibility may depend on the order.</li>
+            </ul>
+
+          </div>
+
+          <!-- PAYMENT -->
+
+          <div class="service-box">
+
+            <div class="service-box-number">
+              03 — PAYMENT
+            </div>
+
+            <h3>Payment Information</h3>
+
+            <p>
+              Our current checkout supports Cash on Delivery.
+              Payment is made when your order is delivered to you.
+            </p>
+
+            <ul>
+              <li>Cash on Delivery available.</li>
+              <li>Confirm your delivery information carefully.</li>
+              <li>Keep the required payment amount ready.</li>
+            </ul>
+
+          </div>
+
+          <!-- WARRANTY -->
+
+          <div class="service-box" id="warranty">
+
+            <div class="service-box-number">
+              04 — WARRANTY
+            </div>
+
+            <h3>Watch Warranty</h3>
+
+            <p>
+              Selected watches may include warranty coverage.
+              Please check the product information or contact
+              our support team for warranty-related questions.
+            </p>
+
+            <ul>
+              <li>Warranty terms may vary by product.</li>
+              <li>Keep your order information for reference.</li>
+              <li>Contact support before requesting service.</li>
+            </ul>
+
+          </div>
+
+          <!-- PRODUCT CARE -->
+
+          <div class="service-box">
+
+            <div class="service-box-number">
+              05 — CARE
+            </div>
+
+            <h3>Watch Care</h3>
+
+            <p>
+              Proper care can help keep your timepiece looking
+              elegant and performing reliably for longer.
+            </p>
+
+            <ul>
+              <li>Avoid unnecessary contact with water.</li>
+              <li>Keep the watch away from harsh chemicals.</li>
+              <li>Store it safely when not in use.</li>
+              <li>Clean with a soft, dry cloth.</li>
+            </ul>
+
+          </div>
+
+          <!-- SUPPORT -->
+
+          <div class="service-box">
+
+            <div class="service-box-number">
+              06 — SUPPORT
+            </div>
+
+            <h3>Personal Assistance</h3>
+
+            <p>
+              Can't find the answer you're looking for?
+              Our customer support team can help with products,
+              orders, delivery and general questions.
+            </p>
+
+            <ul>
+              <li>Product assistance.</li>
+              <li>Order inquiries.</li>
+              <li>Delivery support.</li>
+              <li>General customer care.</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="faq-section" id="faqs">
+
+      <div class="service-container">
+
+        <div class="faq-heading">
+
+          <div class="small-title">
+            NEED TO KNOW
+          </div>
+
+          <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              How can I place an order?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              Browse our watches, open the product you like,
+              add it to your cart and proceed to checkout.
+              Complete your delivery details and place the order.
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              Which payment method is available?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              Our current checkout supports Cash on Delivery.
+              You can pay when your order is delivered.
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              How can I track my order?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              For order updates, contact our customer support
+              team with your order information.
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              Can I return or exchange a watch?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              Eligible returns or exchanges may be available.
+              Please contact customer support before returning
+              any product so we can guide you through the process.
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              Do your watches have a warranty?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              Warranty coverage may vary depending on the watch.
+              Please check the product information or contact us
+              for specific warranty details.
+            </div>
+
+          </div>
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+              How can I contact Premium Timepieces?
+              <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+              You can contact us through our Contact Us page,
+              phone or email. Our support team will be happy
+              to assist you.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUPPORT CTA -->
+
+    <section class="support-section">
+
+      <h2>Still Need Help?</h2>
+
+      <p>
+        Our team is ready to assist you with your order,
+        product questions, delivery information and more.
+      </p>
+
+      <div class="support-buttons">
+
+        <a href="contact.html" class="support-btn primary">
+          CONTACT US
+        </a>
+
+        <a
+          href="https://wa.me/923001234567"
+          class="support-btn secondary"
+          target="_blank"
+        >
+          WHATSAPP
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="service-footer">
+      © 2026 <strong>PREMIUM TIMEPIECES</strong> — Timeless. Elegant. Yours.
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const item = this.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+
+        });
+
+        item.classList.toggle("active");
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>

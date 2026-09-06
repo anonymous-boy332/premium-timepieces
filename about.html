@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .about-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(201,162,39,.12), transparent 35%),
+        linear-gradient(135deg, #111 0%, #181818 55%, #0d0d0d 100%);
+    }
+
+    .about-container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .about-back {
+      display: inline-block;
+      margin-top: 28px;
+      color: #c9a227;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .about-back:hover {
+      color: #fff;
+    }
+
+    .about-hero {
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 80px 20px;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(201,162,39,.18);
+      border-radius: 50%;
+      right: -120px;
+      top: -100px;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(201,162,39,.12);
+      border-radius: 50%;
+      left: -100px;
+      bottom: -80px;
+    }
+
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .about-label {
+      color: #c9a227;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .about-hero h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 7vw, 78px);
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 1px;
+      background: #c9a227;
+      margin: 28px auto;
+    }
+
+    .about-hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #bbb;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .about-story {
+      background: #f8f7f3;
+      color: #222;
+      padding: 90px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .story-image {
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.35)),
+        url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+      position: relative;
+    }
+
+    .story-image::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(201,162,39,.75);
+      pointer-events: none;
+    }
+
+    .story-content .small-title {
+      color: #b08a18;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .story-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 25px;
+      font-weight: 600;
+    }
+
+    .story-content p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .story-signature {
+      margin-top: 30px;
+      color: #b08a18;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .values {
+      padding: 90px 0;
+      background: #111;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .values h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      margin: 0 0 55px;
+      font-weight: 600;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .value-card {
+      border: 1px solid #292929;
+      padding: 42px 28px;
+      transition: .3s;
+      background: #151515;
+    }
+
+    .value-card:hover {
+      border-color: #c9a227;
+      transform: translateY(-5px);
+    }
+
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #c9a227;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: #c9a227;
+      font-size: 22px;
+    }
+
+    .value-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin: 0 0 15px;
+    }
+
+    .value-card p {
+      color: #888;
+      font-size: 12px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .about-cta {
+      padding: 90px 20px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(17,17,17,.88), rgba(17,17,17,.94)),
+        url("https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    }
+
+    .about-cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      margin: 0 0 18px;
+    }
+
+    .about-cta p {
+      color: #aaa;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
+    .about-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #c9a227;
+      color: #111;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: .3s;
+    }
+
+    .about-btn:hover {
+      background: #fff;
+    }
+
+    .about-footer {
+      border-top: 1px solid #252525;
+      padding: 28px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 10px;
+      letter-spacing: 1px;
+      background: #0d0d0d;
+    }
+
+    .about-footer strong {
+      color: #c9a227;
+    }
+
+    @media (max-width: 800px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .story-image {
+        min-height: 380px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero {
+        min-height: 400px;
+      }
+
+      .story-content h2,
+      .values h2,
+      .about-cta h2 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .about-hero {
+        padding: 60px 15px;
+      }
+
+      .about-hero h1 {
+        font-size: 43px;
+      }
+
+      .about-story,
+      .values {
+        padding: 65px 0;
+      }
+
+      .story-image {
+        min-height: 320px;
+      }
+
+      .value-card {
+        padding: 35px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="about-page">
+
+    <div class="about-container">
+      <a href="index.html" class="about-back">← Back to Store</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+
+        <div class="about-label">PREMIUM TIMEPIECES</div>
+
+        <h1>About Us</h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+          Where timeless design meets modern elegance.
+          Premium Timepieces was created for those who believe
+          a watch is more than an accessory — it is a statement
+          of character, confidence and style.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="about-story">
+
+      <div class="about-container">
+
+        <div class="story-grid">
+
+          <div class="story-image"></div>
+
+          <div class="story-content">
+
+            <div class="small-title">OUR STORY</div>
+
+            <h2>
+              Crafted for Those Who Value Time
+            </h2>
+
+            <p>
+              At Premium Timepieces, we believe that every moment
+              deserves to be celebrated. Our collection brings
+              together elegant designs, reliable craftsmanship
+              and contemporary style.
+            </p>
+
+            <p>
+              From classic leather watches to sophisticated
+              metal designs, every timepiece is carefully selected
+              to complement your personal style and everyday life.
+            </p>
+
+            <p>
+              Our mission is simple: to make premium-looking
+              watches accessible while delivering an experience
+              built around quality, trust and timeless elegance.
+            </p>
+
+            <div class="story-signature">
+              Premium Timepieces
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VALUES -->
+    <section class="values">
+
+      <div class="about-container">
+
+        <div class="section-label">WHAT WE STAND FOR</div>
+
+        <h2>Our Values</h2>
+
+        <div class="values-grid">
+
+          <div class="value-card">
+
+            <div class="value-icon">◈</div>
+
+            <h3>Quality</h3>
+
+            <p>
+              We focus on dependable materials, refined designs
+              and watches that are made to become part of your
+              everyday style.
+            </p>
+
+          </div>
+
+          <div class="value-card">
+
+            <div class="value-icon">◆</div>
+
+            <h3>Elegance</h3>
+
+            <p>
+              Our collections are selected with a timeless
+              aesthetic that looks sophisticated today and
+              remains stylish for years to come.
+            </p>
+
+          </div>
+
+          <div class="value-card">
+
+            <div class="value-icon">✓</div>
+
+            <h3>Trust</h3>
+
+            <p>
+              From browsing our collection to receiving your
+              order, we aim to provide a simple, transparent
+              and dependable shopping experience.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta">
+
+      <h2>Find Your Signature Timepiece</h2>
+
+      <p>
+        Explore our curated collection and discover a watch
+        that matches your personality, your style and your time.
+      </p>
+
+      <a href="index.html#products" class="about-btn">
+        SHOP COLLECTION
+      </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="about-footer">
+      © 2026 <strong>PREMIUM TIMEPIECES</strong> — Timeless. Elegant. Yours.
+    </footer>
+
+  </div>
+
+</body>
+</html>

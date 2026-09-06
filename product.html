@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Product Details — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body{
+      margin:0;
+      background:#f8f7f3;
+      color:#111;
+      font-family:"Montserrat",Arial,sans-serif;
+    }
+
+    .product-page{
+      max-width:1180px;
+      margin:0 auto;
+      padding:55px 20px 80px;
+    }
+
+    .back-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:#666;
+      text-decoration:none;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:1px;
+      margin-bottom:35px;
+      text-transform:uppercase;
+    }
+
+    .back-link:hover{
+      color:#c9a227;
+    }
+
+    .details-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:65px;
+      align-items:start;
+    }
+
+    .details-image{
+      background:#efede6;
+      min-height:570px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .details-image:before{
+      content:"PREMIUM TIMEPIECES";
+      position:absolute;
+      top:25px;
+      left:25px;
+      color:#c9a227;
+      font-size:8px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .details-image img{
+      width:100%;
+      height:570px;
+      object-fit:cover;
+      transition:.5s ease;
+    }
+
+    .details-image:hover img{
+      transform:scale(1.025);
+    }
+
+    .details-info{
+      padding-top:15px;
+    }
+
+    .details-label{
+      color:#c9a227;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:13px;
+    }
+
+    .details-title{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:46px;
+      line-height:1.05;
+      font-weight:600;
+      margin:0 0 14px;
+      color:#161616;
+    }
+
+    .details-rating{
+      color:#c9a227;
+      font-size:11px;
+      letter-spacing:2px;
+      margin-bottom:20px;
+    }
+
+    .details-price{
+      font-size:24px;
+      font-weight:700;
+      margin-bottom:5px;
+    }
+
+    .details-old-price{
+      color:#999;
+      font-size:12px;
+      text-decoration:line-through;
+      margin-bottom:25px;
+    }
+
+    .details-divider{
+      height:1px;
+      background:#ded9cb;
+      margin:22px 0;
+    }
+
+    .details-description{
+      color:#666;
+      font-size:11px;
+      line-height:1.9;
+      max-width:500px;
+      margin-bottom:25px;
+    }
+
+    .details-meta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-bottom:25px;
+    }
+
+    .meta-box{
+      border:1px solid #ddd8ca;
+      background:#fff;
+      padding:13px;
+    }
+
+    .meta-box span{
+      display:block;
+      color:#999;
+      font-size:8px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      margin-bottom:5px;
+    }
+
+    .meta-box strong{
+      font-size:10px;
+      font-weight:600;
+    }
+
+    .quantity-row{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:15px;
+    }
+
+    .quantity-label{
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    .quantity{
+      display:flex;
+      border:1px solid #d8d2c3;
+      background:#fff;
+    }
+
+    .quantity button{
+      width:34px;
+      height:34px;
+      border:0;
+      background:#fff;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    .quantity button:hover{
+      background:#f1eee5;
+    }
+
+    .quantity span{
+      width:34px;
+      height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      border-left:1px solid #d8d2c3;
+      border-right:1px solid #d8d2c3;
+    }
+
+    .details-actions{
+      display:flex;
+      gap:10px;
+    }
+
+    .add-cart{
+      flex:1;
+      height:48px;
+      border:1px solid #c9a227;
+      background:#c9a227;
+      color:#111;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:1.5px;
+      cursor:pointer;
+      transition:.25s;
+    }
+
+    .add-cart:hover{
+      background:#111;
+      border-color:#111;
+      color:#fff;
+    }
+
+    .wishlist-btn{
+      width:50px;
+      height:48px;
+      border:1px solid #d5d0c2;
+      background:#fff;
+      font-size:20px;
+      cursor:pointer;
+      transition:.25s;
+    }
+
+    .wishlist-btn:hover{
+      color:#c9a227;
+      border-color:#c9a227;
+    }
+
+    .shipping-note{
+      margin-top:20px;
+      background:#eeeae0;
+      padding:13px;
+      font-size:9px;
+      color:#666;
+      line-height:1.7;
+    }
+
+    .shipping-note strong{
+      color:#222;
+    }
+
+    .detail-toast{
+      position:fixed;
+      right:25px;
+      bottom:25px;
+      background:#111;
+      color:#fff;
+      padding:13px 18px;
+      font-size:9px;
+      letter-spacing:.5px;
+      opacity:0;
+      transform:translateY(15px);
+      pointer-events:none;
+      transition:.3s;
+      z-index:100;
+    }
+
+    .detail-toast.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media(max-width:700px){
+
+      .product-page{
+        padding:30px 15px 60px;
+      }
+
+      .details-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .details-image{
+        min-height:420px;
+      }
+
+      .details-image img{
+        height:420px;
+      }
+
+      .details-info{
+        padding:0;
+      }
+
+      .details-title{
+        font-size:36px;
+      }
+
+      .details-meta{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:480px){
+
+      .details-image{
+        min-height:360px;
+      }
+
+      .details-image img{
+        height:360px;
+      }
+
+      .details-title{
+        font-size:31px;
+      }
+
+      .details-price{
+        font-size:21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="product-page">
+
+    <a href="index.html" class="back-link">
+      ← Back to Store
+    </a>
+
+    <div class="details-grid">
+
+      <div class="details-image">
+        <img id="productImage" src="" alt="">
+      </div>
+
+      <div class="details-info">
+
+        <div class="details-label">
+          Premium Timepiece
+        </div>
+
+        <h1 class="details-title" id="productName">
+          Loading...
+        </h1>
+
+        <div class="details-rating">
+          ★ ★ ★ ★ ★
+        </div>
+
+        <div class="details-price" id="productPrice">
+          Rs. 0
+        </div>
+
+        <div class="details-old-price" id="productOldPrice">
+          Rs. 0
+        </div>
+
+        <div class="details-divider"></div>
+
+        <p class="details-description" id="productDescription">
+          Crafted for those who appreciate timeless elegance,
+          precision and premium design. Every detail is created
+          to complement your style and make a lasting impression.
+        </p>
+
+        <div class="details-meta">
+
+          <div class="meta-box">
+            <span>Movement</span>
+            <strong>Premium Quartz</strong>
+          </div>
+
+          <div class="meta-box">
+            <span>Case</span>
+            <strong>Stainless Steel</strong>
+          </div>
+
+          <div class="meta-box">
+            <span>Water Resistance</span>
+            <strong>3 ATM</strong>
+          </div>
+
+          <div class="meta-box">
+            <span>Warranty</span>
+            <strong>1 Year</strong>
+          </div>
+
+        </div>
+
+        <div class="quantity-row">
+
+          <div class="quantity-label">
+            Quantity
+          </div>
+
+          <div class="quantity">
+            <button id="minusBtn">−</button>
+            <span id="quantity">1</span>
+            <button id="plusBtn">+</button>
+          </div>
+
+        </div>
+
+        <div class="details-actions">
+
+          <button class="add-cart" id="addCartBtn" type="button" onclick="addCurrentProductToCart()">
+  ADD TO CART
+</button>
+
+          <button class="wishlist-btn" id="wishlistBtn">
+            ♡
+          </button>
+
+        </div>
+
+        <div class="shipping-note">
+          <strong>Complimentary Shipping</strong><br>
+          Free shipping on orders over Rs. 20,000.
+          Secure packaging and delivery across Pakistan.
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="detail-toast" id="detailToast">
+    Added to cart ✓
+  </div>
+
+  <script src="product.js"></script>
+
+</body>
+</html>

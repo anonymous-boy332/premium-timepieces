@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Checkout — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .checkout-page {
+      min-height: 100vh;
+      background: #f8f7f3;
+      padding: 60px 6%;
+    }
+
+    .checkout-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .checkout-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .checkout-title span {
+      display: block;
+      color: #c9a227;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .checkout-title h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: #111;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .checkout-box {
+      background: #fff;
+      border: 1px solid #e5e0d3;
+      padding: 30px;
+    }
+
+    .checkout-box h2 {
+      margin: 0 0 25px;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: #111;
+    }
+
+    .checkout-item {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .checkout-item:first-child {
+      padding-top: 0;
+    }
+
+    .checkout-item-image {
+      width: 100px;
+      height: 100px;
+      flex: 0 0 100px;
+      background: #f5f3ed;
+      overflow: hidden;
+    }
+
+    .checkout-item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .checkout-item-info {
+      flex: 1;
+    }
+
+    .checkout-item-info h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: #222;
+    }
+
+    .checkout-item-price {
+      color: #c9a227;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .checkout-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .checkout-item-controls button {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .checkout-item-controls span {
+      min-width: 25px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .checkout-remove {
+      border: 0 !important;
+      background: transparent !important;
+      color: #999;
+      font-size: 12px !important;
+      width: auto !important;
+      margin-left: 8px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .summary-row.total {
+      border-bottom: 0;
+      padding-top: 22px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .summary-row.total strong {
+      color: #c9a227;
+    }
+
+    .customer-form {
+      margin-top: 35px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px 14px;
+      border: 1px solid #ddd;
+      background: #fff;
+      outline: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+    }
+
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .place-order-btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      border: 0;
+      background: #111;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .place-order-btn:hover {
+      background: #c9a227;
+    }
+
+    .continue-shopping {
+      display: block;
+      text-align: center;
+      margin-top: 18px;
+      color: #777;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .continue-shopping:hover {
+      color: #c9a227;
+    }
+
+    .empty-checkout {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .empty-checkout h2 {
+      margin-bottom: 10px;
+    }
+
+    .empty-checkout p {
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .empty-checkout a {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .checkout-toast {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: #111;
+      color: #fff;
+      padding: 14px 20px;
+      font-size: 13px;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .checkout-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 850px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .checkout-page {
+        padding: 40px 5%;
+      }
+
+      .checkout-title h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .checkout-box {
+        padding: 20px;
+      }
+
+      .checkout-item-image {
+        width: 75px;
+        height: 75px;
+        flex-basis: 75px;
+      }
+
+      .checkout-title h1 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="checkout-page">
+    <div class="checkout-container">
+
+      <div class="checkout-title">
+        <span>PREMIUM TIMEPIECES</span>
+        <h1>Your Shopping Cart</h1>
+      </div>
+
+      <div id="checkoutContent"></div>
+
+    </div>
+  </main>
+
+  <div id="checkoutToast" class="checkout-toast"></div>
+
+  <script src="checkout.js"></script>
+
+</body>
+</html>

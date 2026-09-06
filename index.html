@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Premium Timepieces — Watch Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        FREE SHIPPING ON ORDERS OVER RS. 20,000
+      </div>
+
+      <div>
+        English &nbsp; | &nbsp; PKR &nbsp; | &nbsp; My Account
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="container header-main">
+
+      <!-- LOGO -->
+      <a class="logo" href="index.html">
+        PREMIUM TIMEPIECES
+      </a>
+
+      <!-- SEARCH -->
+      <div class="search">
+
+        <select aria-label="Category">
+          <option>All Categories</option>
+          <option>Men's Watches</option>
+          <option>Women's Watches</option>
+          <option>Luxury Watches</option>
+          <option>Smart Watches</option>
+        </select>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search your watch..."
+        />
+
+        <button id="searchBtn" aria-label="Search">
+          ⌕
+        </button>
+
+      </div>
+
+      <!-- HEADER ACTIONS -->
+      <div class="header-icons">
+
+        <button title="My Account" aria-label="My Account">
+          ♙
+        </button>
+
+        <button title="Wishlist" aria-label="Wishlist">
+          ♡
+        </button>
+
+        <button class="cart-button" title="Cart" aria-label="Cart">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+
+      <div class="container nav-inner">
+
+        <a href="index.html">
+          HOME
+        </a>
+
+        <a href="#shop">
+          SHOP <small>⌄</small>
+        </a>
+
+        <a href="collections.html">
+          COLLECTIONS <small>⌄</small>
+        </a>
+
+        <a href="#shop">
+          MEN
+        </a>
+
+        <a href="#shop">
+          WOMEN
+        </a>
+
+        <a href="#blog">
+          JOURNAL
+        </a>
+
+        <a href="about.html">
+          ABOUT US
+        </a>
+
+        <a href="contact.html">
+          CONTACT
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="container hero-content">
+
+        <div class="hero-copy">
+
+          <p>
+            EXCLUSIVE COLLECTION — UP TO 20% OFF
+          </p>
+
+          <h1>
+            Timeless.<br>
+            Elegant.<br>
+            Yours.
+          </h1>
+
+          <div class="hero-desc">
+            Discover premium timepieces designed for those
+            who appreciate precision, craftsmanship and timeless style.
+          </div>
+
+          <strong>
+            Starting From Rs. 14,999
+          </strong>
+
+          <a href="#shop" class="btn">
+            SHOP COLLECTION
+          </a>
+
+        </div>
+
+        <div class="hero-watch">
+
+          <div class="watch-face watch-face-one"></div>
+
+          <div class="watch-face watch-face-two"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROMO CARDS -->
+    <section class="container promo-grid">
+
+      <article class="promo-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80"
+          alt="Classic luxury watch"
+        >
+
+        <div>
+          <em>Luxury Collection</em>
+          <b>TIMELESS CLASSICS</b>
+        </div>
+
+      </article>
+
+      <article class="promo-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80"
+          alt="Premium watch"
+        >
+
+        <div>
+          <em>Premium Collection</em>
+          <b>MAKE YOUR MOMENT</b>
+        </div>
+
+      </article>
+
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="container section" id="shop">
+
+      <div class="section-title-row">
+
+        <h2>
+          Best Seller Watches
+        </h2>
+
+        <div class="arrows">
+          <button>‹</button>
+          <button>›</button>
+        </div>
+
+      </div>
+
+      <div id="bestSeller" class="product-grid four"></div>
+
+    </section>
+
+    <!-- DEALS -->
+    <section class="container deal-grid">
+
+      <article class="deal-card leather">
+
+        <div>
+
+          <span>
+            PREMIUM DEAL
+          </span>
+
+          <h3>
+            Royal Leather
+          </h3>
+
+          <p>
+            Classic leather craftsmanship for the modern gentleman.
+          </p>
+
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=700&q=80"
+          alt="Luxury leather watch"
+        >
+
+      </article>
+
+      <article class="deal-card smart">
+
+        <div>
+
+          <span>
+            SMART COLLECTION
+          </span>
+
+          <h3>
+            Modern Precision
+          </h3>
+
+          <p>
+            Smart technology meets sophisticated design.
+          </p>
+
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&w=700&q=80"
+          alt="Smart watch"
+        >
+
+      </article>
+
+    </section>
+
+    <!-- PRODUCT TABS -->
+    <section class="container section">
+
+      <div class="tabs">
+
+        <button class="active" data-filter="all">
+          FEATURED
+        </button>
+
+        <button data-filter="new">
+          NEW ARRIVALS
+        </button>
+
+        <button data-filter="best">
+          BESTSELLERS
+        </button>
+
+        <button data-filter="sale">
+          ON SALE
+        </button>
+
+      </div>
+
+      <div id="products" class="product-grid five"></div>
+
+    </section>
+
+    <!-- BLOG -->
+    <section class="container section blog" id="blog">
+
+      <div class="section-title-row">
+
+        <h2>
+          The Timepiece Journal
+        </h2>
+
+        <div class="arrows">
+          <button>‹</button>
+          <button>›</button>
+        </div>
+
+      </div>
+
+      <div class="blog-grid">
+
+        <article>
+
+          <div class="meta">
+            PREMIUM TIMEPIECES • 30 AUG 2026
+          </div>
+
+          <h3>
+            HOW TO CHOOSE THE PERFECT WATCH FOR YOUR STYLE
+          </h3>
+
+          <img
+            src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=900&q=80"
+            alt="Watch styling"
+          >
+
+        </article>
+
+        <article>
+
+          <div class="meta">
+            PREMIUM TIMEPIECES • 24 AUG 2026
+          </div>
+
+          <h3>
+            THE ART OF BUILDING A TIMELESS WATCH COLLECTION
+          </h3>
+
+          <img
+            src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80"
+            alt="Luxury watch collection"
+          >
+
+        </article>
+
+        <article>
+
+          <div class="meta">
+            PREMIUM TIMEPIECES • 18 AUG 2026
+          </div>
+
+          <h3>
+            WHY CLASSIC WATCHES NEVER GO OUT OF STYLE
+          </h3>
+
+          <img
+            src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=900&q=80"
+            alt="Classic timepiece"
+          >
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- BRANDS -->
+    <div class="brands container">
+
+      <span>CHRONOS</span>
+      <span>ROYAL</span>
+      <span>ELITE</span>
+      <span>VANGUARD</span>
+      <span>TIMECRAFT</span>
+
+    </div>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+      <div class="container newsletter-inner">
+
+        <div>
+
+          <strong>
+            Join Our
+          </strong>
+
+          <span>
+            Exclusive Newsletter
+          </span>
+
+        </div>
+
+        <form id="newsletterForm">
+
+          <input
+            type="email"
+            placeholder="Enter your email address..."
+            required
+          >
+
+          <button>
+            SUBSCRIBE
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <div class="container footer-grid">
+
+      <!-- CONTACT -->
+      <div>
+
+        <h4>
+          CONTACT INFO
+        </h4>
+
+        <p>
+          Premium Timepieces<br>
+          Karachi, Pakistan
+        </p>
+
+        <p>
+          Phone: +92 3302820612
+        </p>
+
+        <p>
+          Email: info@premiumtimepieces.com
+        </p>
+
+        <div class="social">
+          f &nbsp; ◎ &nbsp; p &nbsp; in &nbsp; ▶
+        </div>
+
+      </div>
+
+      <!-- INFORMATION -->
+      <div>
+
+        <h4>
+          INFORMATION
+        </h4>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="#shop">
+          Shop
+        </a>
+
+        <a href="#blog">
+          Journal
+        </a>
+
+        <a href="collections.html">
+          Collections
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+      <!-- CUSTOMER SERVICE -->
+      <div>
+
+        <h4>
+          CUSTOMER SERVICE
+        </h4>
+
+        <a href="customer-service.html">
+          Shipping & Delivery
+        </a>
+
+        <a href="customer-service.html">
+          Returns & Exchange
+        </a>
+
+        <a href="customer-service.html">
+          FAQs
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+        </a>
+
+        <a href="contact.html">
+          Contact Support
+        </a>
+
+        <a href="privacy.html">Privacy Policy</a>
+
+      </div>
+
+      <!-- APP -->
+      <div>
+
+        <h4>
+          SHOP WITH US
+        </h4>
+
+        <p>
+          Discover premium watches crafted for
+          every occasion and every moment.
+        </p>
+
+        <div class="store">
+          ▶ Google Play
+        </div>
+
+        <div class="store">
+           App Store
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright container">
+      Copyright © 2026 Premium Timepieces. All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast">
+    Added to cart ✓
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

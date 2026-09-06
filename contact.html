@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us — Premium Timepieces</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .contact-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(201,162,39,.12), transparent 35%),
+        linear-gradient(135deg, #111 0%, #181818 55%, #0d0d0d 100%);
+    }
+
+    .contact-container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .contact-back {
+      display: inline-block;
+      margin-top: 28px;
+      color: #c9a227;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .contact-back:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+
+    .contact-hero {
+      text-align: center;
+      padding: 80px 20px 75px;
+    }
+
+    .contact-label {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .contact-hero h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(44px, 7vw, 72px);
+      font-weight: 600;
+    }
+
+    .contact-line {
+      width: 70px;
+      height: 1px;
+      background: #c9a227;
+      margin: 25px auto;
+    }
+
+    .contact-hero p {
+      max-width: 620px;
+      margin: auto;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* CONTACT INFO */
+
+    .contact-info-section {
+      padding: 0 0 80px;
+    }
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: #151515;
+      border: 1px solid #292929;
+      padding: 32px 20px;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .contact-card:hover {
+      border-color: #c9a227;
+      transform: translateY(-5px);
+    }
+
+    .contact-icon {
+      width: 55px;
+      height: 55px;
+      border: 1px solid #c9a227;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      color: #c9a227;
+      font-size: 19px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: #888;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .contact-card a {
+      color: #aaa;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .contact-card a:hover {
+      color: #c9a227;
+    }
+
+    /* MAIN CONTACT */
+
+    .contact-main {
+      background: #f8f7f3;
+      color: #222;
+      padding: 90px 0;
+    }
+
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-details .small-title {
+      color: #b08a18;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .contact-details h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      font-weight: 600;
+    }
+
+    .contact-details > p {
+      color: #666;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .detail-row {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid #ddd8cc;
+    }
+
+    .detail-icon {
+      color: #b08a18;
+      font-size: 17px;
+      width: 25px;
+      text-align: center;
+    }
+
+    .detail-row h4 {
+      margin: 0 0 5px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .detail-row p,
+    .detail-row a {
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+
+    .detail-row a:hover {
+      color: #b08a18;
+    }
+
+    /* FORM */
+
+    .contact-form-box {
+      background: #fff;
+      padding: 42px;
+      box-shadow: 0 15px 45px rgba(0,0,0,.08);
+    }
+
+    .contact-form-box h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 29px;
+      margin: 0 0 25px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      border: 1px solid #ddd;
+      outline: none;
+      padding: 13px 14px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      background: #fafafa;
+      color: #222;
+      transition: .3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #c9a227;
+      background: #fff;
+    }
+
+    .form-group textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .contact-submit {
+      width: 100%;
+      border: none;
+      padding: 15px;
+      background: #c9a227;
+      color: #111;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .contact-submit:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* LOCATION */
+
+    .location-section {
+      padding: 90px 0;
+      background: #111;
+    }
+
+    .location-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .location-heading .section-label {
+      color: #c9a227;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .location-heading h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+    }
+
+    .location-box {
+      min-height: 300px;
+      border: 1px solid #292929;
+      background:
+        linear-gradient(rgba(17,17,17,.84), rgba(17,17,17,.84)),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .location-box::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(201,162,39,.55);
+      pointer-events: none;
+    }
+
+    .location-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .location-pin {
+      color: #c9a227;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .location-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin: 0 0 10px;
+    }
+
+    .location-content p {
+      color: #aaa;
+      font-size: 12px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* FOOTER */
+
+    .contact-footer {
+      border-top: 1px solid #252525;
+      padding: 28px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 10px;
+      letter-spacing: 1px;
+      background: #0d0d0d;
+    }
+
+    .contact-footer strong {
+      color: #c9a227;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-hero {
+        padding: 60px 15px;
+      }
+
+      .contact-info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-main {
+        padding: 65px 0;
+      }
+
+      .contact-details h2 {
+        font-size: 34px;
+      }
+
+      .contact-form-box {
+        padding: 28px 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .location-section {
+        padding: 65px 0;
+      }
+
+      .location-content h3 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contact-page">
+
+    <div class="contact-container">
+      <a href="index.html" class="contact-back">← Back to Store</a>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="contact-hero">
+
+      <div class="contact-label">PREMIUM TIMEPIECES</div>
+
+      <h1>Contact Us</h1>
+
+      <div class="contact-line"></div>
+
+      <p>
+        Have a question about our watches, your order or our services?
+        Our team is here to help. Reach out to Premium Timepieces
+        and we'll be happy to assist you.
+      </p>
+
+    </section>
+
+    <!-- CONTACT INFO -->
+
+    <section class="contact-info-section">
+
+      <div class="contact-container">
+
+        <div class="contact-info-grid">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">☎</div>
+
+            <h3>Phone</h3>
+
+            <p>
+              <a href="tel:+923001234567">
+                +92 300 1234567
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="contact-icon">✉</div>
+
+            <h3>Email</h3>
+
+            <p>
+              <a href="mailto:info@premiumtimepieces.com">
+                info@premiumtimepieces.com
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="contact-icon">◉</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+              <a href="https://wa.me/923001234567">
+                Chat With Us
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="contact-icon">⌖</div>
+
+            <h3>Location</h3>
+
+            <p>
+              Karachi, Pakistan
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT MAIN -->
+
+    <section class="contact-main">
+
+      <div class="contact-container">
+
+        <div class="contact-main-grid">
+
+          <!-- DETAILS -->
+
+          <div class="contact-details">
+
+            <div class="small-title">GET IN TOUCH</div>
+
+            <h2>
+              We'd Love to Hear From You
+            </h2>
+
+            <p>
+              Whether you need help choosing the perfect timepiece,
+              want to ask about an existing order, or simply want
+              to learn more about Premium Timepieces, feel free
+              to contact us.
+            </p>
+
+            <div class="detail-row">
+
+              <div class="detail-icon">⌖</div>
+
+              <div>
+                <h4>Visit Us</h4>
+                <p>
+                  Karachi, Sindh, Pakistan
+                </p>
+              </div>
+
+            </div>
+
+            <div class="detail-row">
+
+              <div class="detail-icon">☎</div>
+
+              <div>
+                <h4>Call Us</h4>
+                <p>
+                  <a href="tel:+923302820612">
+                    +92 3302820612
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+            <div class="detail-row">
+
+              <div class="detail-icon">✉</div>
+
+              <div>
+                <h4>Email Us</h4>
+                <p>
+                  <a href="mailto:info@premiumtimepieces.com">
+                    info@premiumtimepieces.com
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+            <div class="detail-row">
+
+              <div class="detail-icon">◷</div>
+
+              <div>
+                <h4>Business Hours</h4>
+                <p>
+                  Monday — Saturday: 10:00 AM — 8:00 PM<br>
+                  Sunday: 12:00 PM — 6:00 PM
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FORM -->
+
+          <div class="contact-form-box">
+
+            <h3>Send Us a Message</h3>
+
+            <form id="contactForm">
+
+              <div class="form-row">
+
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  >
+                </div>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="subject">Subject</label>
+
+                <select id="subject" name="subject" required>
+
+                  <option value="">Select a subject</option>
+                  <option value="order">Order Inquiry</option>
+                  <option value="product">Product Question</option>
+                  <option value="delivery">Delivery Question</option>
+                  <option value="return">Return / Exchange</option>
+                  <option value="other">Other</option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+
+              </div>
+
+              <button
+                type="submit"
+                class="contact-submit"
+              >
+                SEND MESSAGE
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LOCATION -->
+
+    <section class="location-section">
+
+      <div class="contact-container">
+
+        <div class="location-heading">
+
+          <div class="section-label">
+            FIND US
+          </div>
+
+          <h2>Our Location</h2>
+
+        </div>
+
+        <div class="location-box">
+
+          <div class="location-content">
+
+            <div class="location-pin">⌖</div>
+
+            <h3>Karachi, Pakistan</h3>
+
+            <p>
+              Premium Timepieces<br>
+              Karachi, Sindh, Pakistan
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="contact-footer">
+      © 2026 <strong>PREMIUM TIMEPIECES</strong> — Timeless. Elegant. Yours.
+    </footer>
+
+  </div>
+
+  <script>
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert(
+          "Thank you for contacting Premium Timepieces. We will get back to you soon."
+        );
+
+        this.reset();
+      });
+  </script>
+
+</body>
+</html>
